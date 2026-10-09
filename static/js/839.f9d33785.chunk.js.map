@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/839.e066464d.chunk.js","mappings":"0EAAAA,EAAAC,eAAA","sources":["../external module \"https:/esm.sh/jspdf@2.5.1\""],"sourcesContent":["module.exports = import(\"https://esm.sh/jspdf@2.5.1\");;"],"names":["module","exports"],"sourceRoot":""}
