@@ -1,1 +1,185 @@
-<!doctype html><html lang="ar" dir="rtl" data-theme="day"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><meta name="theme-color" content="#0d0d0f"/><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0d0f'/%3E%3Crect x='28' y='9' width='8' height='9' rx='2' fill='%23c8a24a'/%3E%3Ccircle cx='32' cy='36' r='17' fill='%23c8a24a'/%3E%3C/svg%3E"/><title>أطياب الجاسم — العطور والبخور</title><meta name="description" content="متجر أطياب الجاسم: عطور شرقية وبخور فاخر — تشكيلة العطور والبخور مع التفاصيل والأسعار والتقييمات وعربة التسوق."/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" media="print" onload='this.media="all"'/><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap"/></noscript><script src="./atyab-config.js"></script><script defer="defer" src="./static/js/main.98400f39.js"></script><link href="./static/css/main.fc9c4b34.css" rel="stylesheet"></head><body><div id="root"></div></body></html>
+<div dir="rtl" id="appRoot">
+<style>
+  *{box-sizing:border-box}
+  #appRoot{font-family:"Segoe UI",Tahoma,Arial,sans-serif;min-height:100vh;margin:0;padding:32px 16px 60px;color:#eef1f6;text-align:right;
+    background:radial-gradient(1200px 500px at 85% -5%,rgba(64,120,255,.16),transparent 60%),
+               radial-gradient(900px 480px at 10% 0%,rgba(0,200,170,.12),transparent 55%),
+               linear-gradient(180deg,#0d1117,#11151c);}
+  .wrap{max-width:1060px;margin:0 auto}
+  .brand{text-align:center;margin-bottom:26px}
+  .brand h1{margin:0;font-size:30px;font-weight:900;letter-spacing:.2px}
+  .brand p{margin:8px 0 0;color:#9aa7bd;font-size:15px}
+  .card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:34px 30px;max-width:620px;margin:0 auto;backdrop-filter:blur(6px);box-shadow:0 24px 70px rgba(0,0,0,.45)}
+  .card h2{margin:0 0 6px;font-size:21px;font-weight:800}
+  .card .sub{color:#aeb9cf;font-size:14.5px;line-height:2;margin-bottom:20px}
+  label.lbl{display:block;font-weight:800;margin:0 0 10px;font-size:15px}
+  .codeInput{width:100%;font-size:23px;letter-spacing:3px;text-align:center;padding:15px;border-radius:14px;border:1.5px solid rgba(255,255,255,.18);background:#0b0f16;color:#fff;outline:none;transition:.2s}
+  .codeInput:focus{border-color:#4da3ff;box-shadow:0 0 0 4px rgba(77,163,255,.18)}
+  .goBtn{margin-top:18px;width:100%;border:none;border-radius:14px;padding:15px;font-size:18px;font-weight:900;color:#fff;cursor:pointer;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);}
+  .goBtn:hover{filter:brightness(1.1)}
+  .goBtn:disabled{opacity:.65;cursor:wait}
+  .err{display:none;background:rgba(229,72,77,.14);border:1px solid #e5484d;color:#ffc2c5;border-radius:12px;padding:12px;margin-top:16px;text-align:center;font-weight:700;font-size:14px}
+  .cfg{margin-top:18px;text-align:center}
+  .cfg summary{cursor:pointer;color:#8b96ac;font-size:12.5px}
+  .cfg input{direction:ltr;width:100%;max-width:420px;font-size:12px;padding:9px;border-radius:9px;border:1px solid #333;background:#0b0f16;color:#cbd5e1;margin-top:8px}
+  .hint{color:#7d8aa1;font-size:12.5px;text-align:center;margin-top:14px;line-height:2}
+  /* النتائج */
+  #resultView{display:none}
+  .who{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+  .avatar{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#fff;background:linear-gradient(135deg,#7c3aed,#06b6d4)}
+  .who .nm{font-size:19px;font-weight:900}
+  .who .cd{color:#9aa7bd;font-size:13px;direction:ltr}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+  .stat{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:14px 16px}
+  .stat small{display:block;color:#9aa7bd;font-size:12.5px;margin-bottom:6px}
+  .stat b{font-size:21px}
+  .stat.g b{color:#3ddc84}.stat.y b{color:#ffd21f}.stat.w b{color:#fff}
+  .tblCard{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden}
+  .tblScroll{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:640px}
+  th{color:#9aa7bd;font-weight:700;padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.25);white-space:nowrap}
+  td{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.06);text-align:center}
+  tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:rgba(255,255,255,.025)}
+  .oCode{direction:ltr;font-size:13px;color:#c6cfdd}
+  .oNo{font-size:12.5px;color:#8b96ac}
+  .oDate{font-size:13.5px}.oDate small{display:block;color:#8b96ac;font-size:11.5px}
+  .pill{display:inline-block;padding:3px 14px;border-radius:20px;font-size:12.5px;font-weight:800}
+  .pill.ok{background:rgba(61,220,132,.14);color:#5ff09a;border:1px solid rgba(61,220,132,.35)}
+  .pill.no{background:rgba(255,255,255,.06);color:#9aa7bd;border:1px solid rgba(255,255,255,.15)}
+  .comm{color:#ffd21f;font-weight:800}.dash{color:#5b6577;font-weight:800}
+  .rate{color:#4da3ff;font-weight:700}
+  .note{color:#8b96ac;font-size:12.5px;line-height:2.1;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:12px 16px;margin-top:12px}
+  .backBtn{margin:18px auto 0;display:block;background:transparent;border:1px solid rgba(255,255,255,.25);color:#cfd6e2;border-radius:12px;padding:10px 30px;cursor:pointer;font-size:14px}
+  .spinner{display:inline-block;width:17px;height:17px;border:3px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:sp .8s linear infinite;vertical-align:middle}
+  @keyframes sp{to{transform:rotate(360deg)}}
+  @media(max-width:640px){.stats{grid-template-columns:1fr 1fr}.brand h1{font-size:23px}.card{padding:24px 18px}}
+</style>
+
+<div class="wrap">
+  <div class="brand">
+    <h1>كشف مستحقات المسوّق</h1>
+    <p>أدخل كودك الخاص لعرض فواتيرك وعمولاتك — بدون تسجيل دخول</p>
+  </div>
+
+  <div class="card" id="entryView">
+    <h2>مرحباً بك 👋</h2>
+    <div class="sub">الكود موجود مع مشرفك أو في رسالتك الترحيبية. كل كود يعرض بيانات صاحبه فقط، والعرض للقراءة فقط ولا يغيّر أي شيء في حساباتك.</div>
+    <label class="lbl" for="codeInput">الكود الخاص بك</label>
+    <input class="codeInput" id="codeInput" placeholder="MKT-1234" autocomplete="off" />
+    <button class="goBtn" id="sendBtn" onclick="lookupCode()">عرض الكشف</button>
+    <div class="err" id="errEl"></div>
+    <details class="cfg"><summary>إعدادات الربط بالسيرفر (للمشرف)</summary>
+      <input id="apiInput" placeholder="https://api.your-site.com — فارغ = وضع تجريبي" />
+    </details>
+    <div class="hint">الوضع الحالي: <b id="modeLbl">تجريبي</b> — ضع رابط الـ API أعلاه وسيُحفظ تلقائياً.</div>
+  </div>
+
+  <div id="resultView">
+    <div class="who"><div class="avatar" id="avatarEl">؟</div>
+      <div><div class="nm" id="mName">—</div><div class="cd" id="mCode">—</div></div>
+    </div>
+    <div class="stats">
+      <div class="stat w"><small>طلبات محتسبة</small><b id="stOrders">—</b></div>
+      <div class="stat g"><small>قيمة المنتجات (محتسب)</small><b id="stProducts">—</b></div>
+      <div class="stat y"><small>إجمالي العمولة المستحقة</small><b id="stComm">—</b></div>
+    </div>
+    <div class="tblCard"><div class="tblScroll"><table>
+      <thead><tr><th>الطلب</th><th>التاريخ</th><th>قيمة المنتجات</th><th>النسبة</th><th>العمولة</th><th>الحالة</th></tr></thead>
+      <tbody id="rowsEl"></tbody>
+    </table></div></div>
+    <div class="note">النسبة في كل سطر هي المُجدولة على الطلب لحظة الشراء — تغيير نسبتك لاحقاً لا يغيّر القديم. والمُحتسب في الإجمالي = المدفوع وغير الملغي/المرتجع. والمُستبعد يبقى في الجدول للشفافية.</div>
+    <button class="backBtn" onclick="goBack()">← إدخال كود آخر</button>
+  </div>
+</div>
+
+<script>
+var API_BASE = localStorage.getItem("mk_api_base") || "";
+var apiInput = document.getElementById("apiInput");
+apiInput.value = API_BASE; updMode();
+apiInput.addEventListener("change", function(){
+  API_BASE = apiInput.value.trim().replace(/\/+$/,"");
+  if(API_BASE) localStorage.setItem("mk_api_base", API_BASE); else localStorage.removeItem("mk_api_base");
+  updMode();
+});
+function updMode(){ document.getElementById("modeLbl").textContent = API_BASE ? ("مربوط: "+API_BASE) : "تجريبي"; }
+
+function mockData(code){
+  var R = [
+    {order_no:28,order_code:"AY-20261022-0028",order_date:"2026-10-22T22:41:00",products_total:600,rate:20,commission:120,counts:true},
+    {order_no:27,order_code:"AY-20261022-0027",order_date:"2026-10-22T19:14:00",products_total:600,rate:20,commission:120,counts:true},
+    {order_no:25,order_code:"AY-20261022-0025",order_date:"2026-10-22T16:24:00",products_total:600,rate:20,commission:null,counts:false},
+    {order_no:23,order_code:"AY-20261022-0023",order_date:"2026-10-22T07:59:00",products_total:100,rate:20,commission:null,counts:false},
+    {order_no:16,order_code:"AY-20261021-0016",order_date:"2026-10-21T18:33:00",products_total:600,rate:20,commission:null,counts:false},
+    {order_no:15,order_code:"AY-20261021-0015",order_date:"2026-10-21T15:55:00",products_total:600,rate:20,commission:null,counts:false}
+  ];
+  return {marketer_code:code, marketer_name:"مسوّق تجريبي", rows:R};
+}
+function fmt(n){ return Number(n||0).toFixed(2); }
+function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+function fdate(iso){
+  var d = new Date(iso); if(isNaN(d)) return {a:String(iso),b:""};
+  var p=function(x){return String(x).padStart(2,"0");};
+  var a = d.getFullYear()+"/"+p(d.getMonth()+1)+"/"+p(d.getDate())+" "+p(d.getHours())+":"+p(d.getMinutes());
+  var days = Math.floor((Date.now()-d.getTime())/864e5);
+  var b = days<=0?"اليوم":days===1?"قبل يوم":days===2?"قبل يومين":"قبل "+days+" أيام";
+  return {a:a,b:b};
+}
+async function lookupCode(){
+  var code = document.getElementById("codeInput").value.trim();
+  var err = document.getElementById("errEl"); err.style.display="none";
+  if(!code){ err.textContent="المرجو إدخال الكود الخاص بك"; err.style.display="block"; return; }
+  var btn = document.getElementById("sendBtn"); btn.disabled=true; btn.innerHTML='<span class="spinner"></span> جارٍ الجلب…';
+  try{
+    var data;
+    if(API_BASE){
+      var res = await fetch(API_BASE+"/api/marketers/"+encodeURIComponent(code)+"/statement",{headers:{"Accept":"application/json"}});
+      if(res.status===404) throw new Error("الكود غير موجود — تحقق منه وحاول مجدداً");
+      if(res.status===403) throw new Error("هذا الكود موقوف أو خارج فترته — تواصل مع مشرفك");
+      if(!res.ok) throw new Error("تعذّر الجلب (خطأ "+res.status+")");
+      data = normalizeApi(await res.json(), code);
+    } else { await new Promise(r=>setTimeout(r,450)); data = mockData(code); }
+    renderResult(data);
+  }catch(e){ err.textContent=e.message||"حدث خطأ"; err.style.display="block"; }
+  finally{ btn.disabled=false; btn.textContent="عرض الكشف"; }
+}
+// يحوّل JSON الـ Backend إلى صفوف العرض — يقبل camelCase (الباك الحقيقي) وsnake_case
+function normalizeApi(d, fallbackCode){
+  var list = d.rows || d.items || d.data || [];
+  var rows = list.map(function(x){ return {
+    order_no:(x.order_no ?? x.orderNo), order_code:(x.order_code ?? x.orderCode), order_date:(x.order_date ?? x.orderDate),
+    products_total:Number(x.products_total ?? x.productsTotal ?? 0), rate:Number(x.rate ?? 0),
+    commission:(x.commission==null?null:Number(x.commission)), counts:!!x.counts };});
+  return { marketer_code:(d.marketer_code||d.marketerCode||d.code||fallbackCode),
+    marketer_name:(d.marketer_name||d.marketerName||""), rows:rows };
+}
+function renderResult(data){
+  var tb=document.getElementById("rowsEl"); tb.innerHTML="";
+  var cnt=0, pv=0, cm=0;
+  data.rows.forEach(function(x){
+    if(x.counts){cnt++; pv+=+x.products_total; cm+=(+x.commission||0);}
+    var f=fdate(x.order_date);
+    var tr=document.createElement("tr");
+    tr.innerHTML='<td><div class="oCode">'+esc(x.order_code)+'</div><div class="oNo">طلب #'+esc(x.order_no)+'</div></td>'+
+      '<td class="oDate">'+esc(f.a)+'<small>'+esc(f.b)+'</small></td>'+
+      '<td>'+fmt(x.products_total)+'</td><td class="rate">%'+esc(x.rate)+'</td>'+
+      '<td>'+(x.counts?'<span class="comm">'+fmt(x.commission)+'</span>':'<span class="dash">—</span>')+'</td>'+
+      '<td>'+(x.counts?'<span class="pill ok">يُحتسب</span>':'<span class="pill no">مستبعد من العمولة</span>')+'</td>';
+    tb.appendChild(tr);
+  });
+  document.getElementById("mName").textContent=data.marketer_name||"مسوّق";
+  document.getElementById("mCode").textContent=data.marketer_code;
+  document.getElementById("avatarEl").textContent=String(data.marketer_name||data.marketer_code||"؟").trim().charAt(0);
+  document.getElementById("stOrders").textContent=cnt+" طلبات · "+data.rows.length+" بنود";
+  document.getElementById("stProducts").textContent=fmt(pv);
+  document.getElementById("stComm").textContent=fmt(cm);
+  document.getElementById("entryView").style.display="none";
+  document.getElementById("resultView").style.display="block";
+  window.scrollTo(0,0);
+}
+function goBack(){ document.getElementById("resultView").style.display="none"; document.getElementById("entryView").style.display="block"; }
+document.getElementById("codeInput").addEventListener("keydown",function(e){ if(e.key==="Enter") lookupCode(); });
+window.lookupCode=lookupCode; window.goBack=goBack;
+</script>
+</div>
