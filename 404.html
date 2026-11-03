@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- GitHub Pages: أي مسار غير ملف (مثل /m/F8GQR2 بدون #) يصل هنا —
+     نحوّله لمسار هاش ليتولاه راوتر المتجر (بما فيه قاعدة الاحتياط أدناه).
+     يوضع في public/404.html (يُنسخ تلقائيًا لجذر النشر). -->
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><title>جارٍ التحويل…</title>
+<script>
+(function () {
+  var p = location.pathname, q = location.search || "", h = location.hash || "";
+  // لا تحوّل ملفات حقيقية (صور/سكربتات/الـ API لا يمر من هنا أصلًا)
+  if (/\.[a-z0-9]{2,5}$/i.test(p)) return;
+  var target = "/#" + p + q;
+  if (h && h.charAt(1) !== "/") target += h;
+  location.replace(target);
+})();
+</script>
+</head>
+<body><p style="text-align:center;font-family:sans-serif">جارٍ التحويل…</p></body>
+</html>
