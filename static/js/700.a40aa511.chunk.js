@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkperfumshop||=[]).push([[700],{3700(a,t,e){e.r(t),e.d(t,{default:()=>u});var o=e(5268),s=e(579);function u(){return(0,s.jsx)(o.CatalogPage,{catalogKey:"lotions"})}}}]);
+//# sourceMappingURL=700.a40aa511.chunk.js.map

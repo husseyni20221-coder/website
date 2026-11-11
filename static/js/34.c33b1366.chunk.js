@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkperfumshop||=[]).push([[34],{3034(a,s,t){t.r(s),t.d(s,{default:()=>r});var e=t(5268),u=t(579);function r(){return(0,u.jsx)(e.CatalogPage,{catalogKey:"mists"})}}}]);
+//# sourceMappingURL=34.c33b1366.chunk.js.map
