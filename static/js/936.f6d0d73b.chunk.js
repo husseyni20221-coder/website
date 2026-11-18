@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkperfumshop||=[]).push([[936],{6936(a,e,r){r.r(e),r.d(e,{default:()=>s});var t=r(3222),u=r(579);function s(){return(0,u.jsx)(t.CatalogPage,{catalogKey:"hair"})}}}]);
+//# sourceMappingURL=936.f6d0d73b.chunk.js.map

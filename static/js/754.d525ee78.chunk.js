@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkperfumshop||=[]).push([[754],{754(a,u,e){e.r(u),e.d(u,{default:()=>s});var r=e(3222),t=e(579);function s(){return(0,t.jsx)(r.CatalogPage,{catalogKey:"mukhamaria"})}}}]);
+//# sourceMappingURL=754.d525ee78.chunk.js.map

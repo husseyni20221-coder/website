@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkperfumshop||=[]).push([[12],{3012(a,e,s){s.r(e),s.d(e,{default:()=>n});var t=s(3222),u=s(579);function n(){return(0,u.jsx)(t.CatalogPage,{catalogKey:"incense"})}}}]);
+//# sourceMappingURL=12.2d90b87d.chunk.js.map
