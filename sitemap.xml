@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- أطياب الجاسم — خريطة الموقع (تُنسخ تلقائياً لجذر النشر من public/).
      تُقدَّم في Google Search Console لتسريع الفهرسة. صفحات المنتجات
-     (/product/…) ديناميكية فيكتشفها غوغل عبر روابط الأصناف. -->
+     (/product/…) ديناميكية فيكتشفها غوغل عبر روابط الأصناف.
+     ★ 2026-11-25: معامل changefreq «تلميح» فقط وغوغل يقرر بنفسه —
+     ولا توجد قيمة «كل أسبوعين» في المعيار، فالأقسام المتجددة أسبوعية
+     (تغطي العودة كل أسبوعين) والصفحات الثابتة شهرية. حدّث lastmod
+     مع كل نشر بعده تغيير نصي حتى يعود الزاحف. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://atyabaljasim.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://atyabaljasim.com/perfumes</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
-  <url><loc>https://atyabaljasim.com/incense</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
-  <url><loc>https://atyabaljasim.com/ouds</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
-  <url><loc>https://atyabaljasim.com/mists</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://atyabaljasim.com/lotions</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://atyabaljasim.com/mukhamaria</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://atyabaljasim.com/hair</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://atyabaljasim.com/offers</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
-  <url><loc>https://atyabaljasim.com/search</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://atyabaljasim.com/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://atyabaljasim.com/shipping</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://atyabaljasim.com/branches</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://atyabaljasim.com/payments</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://atyabaljasim.com/legal</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://atyabaljasim.com/contact</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://atyabaljasim.com/tracking</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://atyabaljasim.com/</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://atyabaljasim.com/perfumes</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://atyabaljasim.com/incense</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://atyabaljasim.com/ouds</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://atyabaljasim.com/mists</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://atyabaljasim.com/lotions</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://atyabaljasim.com/mukhamaria</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://atyabaljasim.com/hair</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://atyabaljasim.com/offers</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://atyabaljasim.com/search</loc><lastmod>2026-11-25</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://atyabaljasim.com/about</loc><lastmod>2026-11-25</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://atyabaljasim.com/shipping</loc><lastmod>2026-11-25</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://atyabaljasim.com/branches</loc><lastmod>2026-11-25</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://atyabaljasim.com/payments</loc><lastmod>2026-11-25</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://atyabaljasim.com/legal</loc><lastmod>2026-11-25</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://atyabaljasim.com/contact</loc><lastmod>2026-11-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://atyabaljasim.com/tracking</loc><lastmod>2026-11-25</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
